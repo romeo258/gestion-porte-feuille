@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="552.0" prefWidth="781.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.tp.portefeuille.PeriodeCotationController">
+   <children>
+      <Pane layoutX="14.0" layoutY="51.0" prefHeight="490.0" prefWidth="360.0" style="-fx-background-color: black;">
+         <children>
+            <TableView fx:id="tabPeriode" layoutX="13.0" layoutY="37.0" prefHeight="270.0" prefWidth="335.0">
+               <columns>
+                  <TableColumn fx:id="datePeriodeColmn" prefWidth="334.0" text="Date Probable" />
+               </columns>
+            </TableView>
+            <Label layoutX="20.0" layoutY="333.0" text="Date" textFill="#f8f5f5">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="94.0" layoutY="-1.0" prefHeight="30.0" prefWidth="174.0" text="Grerer les Périodes" textFill="#f8f5f5">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnAjouterDate" layoutX="14.0" layoutY="425.0" mnemonicParsing="false" onAction="#AjouterDate" prefHeight="39.0" prefWidth="131.0" text="Ajouter">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnSupprimerDate" layoutX="208.0" layoutY="425.0" mnemonicParsing="false" onAction="#SupprimerDate" prefHeight="39.0" prefWidth="131.0" text="Supprimer">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <DatePicker fx:id="txtNomDatePeriode" layoutX="81.0" layoutY="329.0" prefHeight="39.0" prefWidth="198.0" />
+         </children>
+      </Pane>
+      <Pane layoutX="400.0" layoutY="51.0" prefHeight="490.0" prefWidth="360.0" style="-fx-background-color: black;">
+         <children>
+            <TableView fx:id="tabCotation" layoutX="13.0" layoutY="37.0" prefHeight="270.0" prefWidth="335.0">
+               <columns>
+                  <TableColumn fx:id="titreCotColmn" prefWidth="104.0" text="Titre" />
+                  <TableColumn fx:id="prixCotColmn" prefWidth="104.0" text="Prix" />
+                  <TableColumn fx:id="dateCotColmn" prefWidth="126.0" text="Date Cotation" />
+               </columns>
+            </TableView>
+            <Label layoutX="96.0" layoutY="-1.0" text="Gérer les Cotations" textFill="#f8f5f5">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="18.0" layoutY="315.0" text="Titre" textFill="#f8f5f5">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="21.0" layoutY="345.0" text="Prix" textFill="#f8f5f5">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnAjouterCotation" layoutX="20.0" layoutY="432.0" mnemonicParsing="false" onAction="#AjouterCotation" prefHeight="37.0" prefWidth="88.0" text="Ajouter">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnModifierCotation" layoutX="140.0" layoutY="432.0" mnemonicParsing="false" onAction="#ModifierCotation" prefHeight="37.0" prefWidth="88.0" text="Modifier">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnSupprimerCotation" layoutX="255.0" layoutY="432.0" mnemonicParsing="false" onAction="#SupprimerCotation" prefHeight="37.0" prefWidth="88.0" text="Supprimer">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <Label layoutX="21.0" layoutY="375.0" text="Date" textFill="#f8f5f5">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="txtNomTitreCoter" layoutX="78.0" layoutY="318.0" prefHeight="25.0" prefWidth="217.0" />
+            <ComboBox fx:id="txtDateTitreCoter" layoutX="78.0" layoutY="380.0" prefHeight="25.0" prefWidth="217.0" />
+            <TextField fx:id="txtPrixTitreCoter" layoutX="79.0" layoutY="348.0" prefHeight="25.0" prefWidth="217.0" />
+         </children>
+      </Pane>
+      <Label alignment="TOP_CENTER" layoutX="123.0" layoutY="9.0" prefHeight="30.0" prefWidth="464.0" text="Gestion Des Portes Feuilles" textAlignment="CENTER" textFill="#4884e4">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>

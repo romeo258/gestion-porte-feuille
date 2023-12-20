@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="552.0" prefWidth="781.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.tp.portefeuille.NegoProprioController">
+   <children>
+      <Pane layoutY="51.0" prefHeight="490.0" prefWidth="360.0" style="-fx-background-color: black;">
+         <children>
+            <Label layoutX="44.0" layoutY="-1.0" text="Grerer les Prorprietaire par Titre" textFill="#f8f5f5">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnAjouterAppart" layoutX="16.0" layoutY="425.0" mnemonicParsing="false" onAction="#AjouterAppart" prefHeight="37.0" prefWidth="88.0" text="Ajouter">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnModifierAppart" layoutX="136.0" layoutY="425.0" mnemonicParsing="false" onAction="#ModifierAppart" prefHeight="37.0" prefWidth="88.0" text="Modifier">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnSupprimerAppart" layoutX="251.0" layoutY="425.0" mnemonicParsing="false" onAction="#SupprimerAppart" prefHeight="37.0" prefWidth="88.0" text="Supprimer">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <TableView fx:id="tabAppartenir" layoutX="13.0" layoutY="29.0" prefHeight="280.0" prefWidth="335.0">
+               <columns>
+                  <TableColumn fx:id="titreProColmn" prefWidth="98.0" text="Titre" />
+                  <TableColumn fx:id="qteTitreProColmn" prefWidth="115.0" text="Quantité" />
+                  <TableColumn fx:id="clientTitreProcolmn" prefWidth="121.0" text="Propriétaire" />
+               </columns>
+            </TableView>
+            <Label layoutX="19.0" layoutY="321.0" text="Titre" textFill="#f8f5f5">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="18.0" layoutY="350.0" text="Quantié" textFill="#f8f5f5">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="18.0" layoutY="380.0" text="Propriétaire" textFill="#f8f5f5">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="txtNomTitrepro" layoutX="122.0" layoutY="323.0" prefHeight="25.0" prefWidth="217.0" />
+            <ComboBox fx:id="txtClientTitrePro" layoutX="122.0" layoutY="383.0" prefHeight="25.0" prefWidth="217.0" />
+            <TextField fx:id="txtQteTitrePro" layoutX="122.0" layoutY="353.0" prefHeight="25.0" prefWidth="217.0" />
+         </children>
+      </Pane>
+      <Pane layoutX="368.0" layoutY="51.0" prefHeight="490.0" prefWidth="413.0" style="-fx-background-color: black;">
+         <children>
+            <TableView fx:id="tabNego" layoutX="-1.0" layoutY="27.0" prefHeight="280.0" prefWidth="413.0">
+               <columns>
+                  <TableColumn fx:id="clientNegColmn" prefWidth="100.0" text="Client" />
+                  <TableColumn fx:id="titreNegColmn" prefWidth="91.0" text="Titre" />
+                  <TableColumn fx:id="qteNegColmn" prefWidth="56.0" text="Quantité" />
+                  <TableColumn fx:id="sensNegColmn" prefWidth="57.0" text="Sens" />
+                  <TableColumn fx:id="periodeNegColmn" prefWidth="108.0" text="Période" />
+               </columns>
+            </TableView>
+            <Label layoutX="77.0" layoutY="-1.0" text="Grerer les Negociations" textFill="#f8f5f5">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnAjouterNeg" layoutX="13.0" layoutY="443.0" mnemonicParsing="false" onAction="#AjouterNeg" prefHeight="37.0" prefWidth="88.0" text="Ajouter">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnModifierNeg" layoutX="137.0" layoutY="443.0" mnemonicParsing="false" onAction="#ModifierNeg" prefHeight="37.0" prefWidth="88.0" text="Modifier">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnSupprimerNeg" layoutX="258.0" layoutY="443.0" mnemonicParsing="false" onAction="#SupprimerNeg" prefHeight="37.0" prefWidth="88.0" text="Supprimer">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <Label layoutX="13.0" layoutY="334.0" text="Titre" textFill="#f8f5f5">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="14.0" layoutY="361.0" text="Quantité" textFill="#f8f5f5">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="13.0" layoutY="389.0" text="Sens" textFill="#f8f5f5">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="15.0" layoutY="307.0" text="Client" textFill="#f8f5f5">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="13.0" layoutY="416.0" text="Période" textFill="#f8f5f5">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <ComboBox fx:id="txtPeriodeNeg" layoutX="83.0" layoutY="417.0" prefHeight="25.0" prefWidth="263.0" />
+            <ComboBox fx:id="txtSensNeg" layoutX="83.0" layoutY="390.0" prefHeight="25.0" prefWidth="263.0" />
+            <TextField fx:id="txtQteNeg" layoutX="83.0" layoutY="362.0" prefHeight="25.0" prefWidth="263.0" />
+            <ComboBox fx:id="txtTitreNeg" layoutX="83.0" layoutY="335.0" prefHeight="25.0" prefWidth="263.0" />
+            <ComboBox fx:id="txtClientNeg" layoutX="83.0" layoutY="308.0" prefHeight="25.0" prefWidth="263.0" />
+         </children>
+      </Pane>
+      <Label alignment="TOP_CENTER" layoutX="123.0" layoutY="9.0" prefHeight="30.0" prefWidth="464.0" text="Gestion Des Portes Feuilles" textAlignment="CENTER" textFill="#4884e4">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>

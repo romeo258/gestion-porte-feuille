@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="552.0" prefWidth="781.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.tp.portefeuille.PfeuilleController">
+   <children>
+      <Pane layoutX="14.0" layoutY="51.0" prefHeight="490.0" prefWidth="360.0" style="-fx-background-color: black;">
+         <children>
+            <TableView fx:id="tabMarche" layoutX="13.0" layoutY="37.0" prefHeight="270.0" prefWidth="335.0">
+              <columns>
+                <TableColumn fx:id="refMarColmn" prefWidth="112.0" text="Reference" />
+                <TableColumn fx:id="nomMarColmn" prefWidth="222.0" text="Nom Du Marché" />
+              </columns>
+            </TableView>
+            <Label layoutX="14.0" layoutY="328.0" text="Reference" textFill="#f8f5f5">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtNomMar" layoutX="113.0" layoutY="328.0" prefHeight="18.0" prefWidth="159.0" style="-fx-background-color: white;">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextField>
+            <Label layoutX="14.0" layoutY="368.0" text="Libelle" textFill="#f8f5f5">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtLibMar" layoutX="113.0" layoutY="368.0" prefHeight="18.0" prefWidth="159.0" style="-fx-background-color: white;">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextField>
+            <Label layoutX="113.0" layoutY="-1.0" text="Grerer les marchés" textFill="#f8f5f5">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Button fx:id="btnAjouterMar" layoutX="16.0" layoutY="425.0" mnemonicParsing="false" onAction="#AjouterMar" prefHeight="37.0" prefWidth="88.0" text="Ajouter">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnModifierMar" layoutX="136.0" layoutY="425.0" mnemonicParsing="false" onAction="#ModifierMar" prefHeight="37.0" prefWidth="88.0" text="Modifier">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnSupprimerMar" layoutX="251.0" layoutY="425.0" mnemonicParsing="false" onAction="#SupprimerMar" prefHeight="37.0" prefWidth="88.0" text="Supprimer">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <Pane layoutX="400.0" layoutY="51.0" prefHeight="490.0" prefWidth="360.0" style="-fx-background-color: black;">
+         <children>
+            <TableView fx:id="tabCategorie" layoutX="13.0" layoutY="37.0" prefHeight="270.0" prefWidth="335.0">
+               <columns>
+                  <TableColumn fx:id="refCatColmn" prefWidth="122.0" text="Reference" />
+                  <TableColumn fx:id="nomCatColmn" prefWidth="211.0" text="Categorie Du Titre" />
+               </columns>
+            </TableView>
+            <Label layoutX="39.0" layoutY="-1.0" text="Grerer les Categories pour titres" textFill="#f8f5f5">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Label layoutX="18.0" layoutY="335.0" text="Reference" textFill="#f8f5f5">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtNomCat" layoutX="117.0" layoutY="335.0" prefHeight="18.0" prefWidth="159.0" style="-fx-background-color: white;">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextField>
+            <Label layoutX="18.0" layoutY="375.0" text="Libelle" textFill="#f8f5f5">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtLibCat" layoutX="117.0" layoutY="375.0" prefHeight="18.0" prefWidth="159.0" style="-fx-background-color: white;">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </TextField>
+            <Button fx:id="btnAjouterCat" layoutX="20.0" layoutY="432.0" mnemonicParsing="false" onAction="#AjouterCat" prefHeight="37.0" prefWidth="88.0" text="Ajouter">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnModifierCat" layoutX="140.0" layoutY="432.0" mnemonicParsing="false" onAction="#ModifierCat" prefHeight="37.0" prefWidth="88.0" text="Modifier">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+            <Button fx:id="btnSupprimerCat" layoutX="255.0" layoutY="432.0" mnemonicParsing="false" onAction="#SupprimerCat" prefHeight="37.0" prefWidth="88.0" text="Supprimer">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Button>
+         </children>
+      </Pane>
+      <Label alignment="TOP_CENTER" layoutX="123.0" layoutY="9.0" prefHeight="30.0" prefWidth="464.0" text="Gestion Des Portes Feuilles" textAlignment="CENTER" textFill="#4884e4">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>
